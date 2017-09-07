@@ -3,7 +3,7 @@
         <h1>Characters</h1>
     </div>
     <div class="card-container">
-        <div ng-repeat="character in characters" class="charCard">
+        <div ng-repeat="character in characters" class="charCard" ui-sref='character({charID: character.id})'>
             {{character.name}}
         </div>
     </div>

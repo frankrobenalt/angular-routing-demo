@@ -1,8 +1,9 @@
-angular.module('routing').controller('detailsCtrl', function($scope, detailsSrvc) {
+angular.module('routing').controller('detailsCtrl', function($scope, detailsSrvc, $stateParams) {
+    console.log($stateParams);
     $scope.getChar = function(charId) {
         detailsSrvc.getChar(charId).then(function(response) {
             $scope.character = response;
         });
     }
-    $scope.getChar();
+    $scope.getChar($stateParams.charId);
 });
